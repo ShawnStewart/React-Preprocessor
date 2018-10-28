@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AEEA,AAAA,KAAK,CAAC;EACJ,gBAAgB,ECDL,OAAiB;CDE7B;;AEJD,AAAA,MAAM,CAAC;EACL,MAAM,EAAE,eAAe;CACxB;;AJED,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,gBAAgB,EGNP,OAAgB;CHO1B",
+    "sources": [
+        "main.scss",
+        "utilities/_variables.scss",
+        "../components/test1/_test1.scss",
+        "utilities/_variables.scss",
+        "../components/test2/_test2.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
