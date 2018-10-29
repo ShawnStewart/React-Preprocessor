@@ -4,6 +4,9 @@ export default function test2() {
   return (
     <div className="test2">
       <span>
+        <button className="btn small primary">button</button>
+      </span>
+      <span>
         <button className="btn small secondary">button</button>
       </span>
       <span>
@@ -13,7 +16,7 @@ export default function test2() {
         <button className="btn big blue">button</button>
       </span>
       <span>
-        <button className="btn huge red">button</button>
+        <button className="btn huge red inverted">button</button>
       </span>
     </div>
   );

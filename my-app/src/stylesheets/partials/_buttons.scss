@@ -3,7 +3,7 @@
 .btn {
   background-color: map-get($map: $btn-colors, $key: default);
   color: white;
-  border: 4px solid map-get($map: $btn-colors, $key: default);
+  border: 3px solid map-get($map: $btn-colors, $key: default);
   border-radius: 5px;
   padding: 10px 28px;
   font-size: 1.2rem;
@@ -16,12 +16,12 @@
 
   &:hover {
     background-color: darken(map-get($map: $btn-colors, $key: default), 5%);
-    border: 4px solid darken(map-get($map: $btn-colors, $key: default), 5%);
+    border: 3px solid darken(map-get($map: $btn-colors, $key: default), 5%);
   }
 
   &:active {
     background-color: darken(map-get($map: $btn-colors, $key: default), 10%);
-    border: 4px solid darken(map-get($map: $btn-colors, $key: default), 10%);
+    border: 3px solid darken(map-get($map: $btn-colors, $key: default), 10%);
   }
 
   // sizes
@@ -41,50 +41,69 @@
   }
 
   // colors
+  &.primary {
+    background-color: map-get($map: $colors, $key: primary);
+    border: 3px solid map-get($map: $colors, $key: primary);
+    color: black;
+
+    &:hover {
+      background-color: darken(map-get($map: $colors, $key: primary), 10%);
+      border: 3px solid darken(map-get($map: $colors, $key: primary), 10%);
+    }
+
+    &:active {
+      background-color: darken(map-get($map: $colors, $key: primary), 20%);
+      border: 3px solid darken(map-get($map: $colors, $key: primary), 20%);
+    }
+  }
 
   &.secondary {
     background-color: map-get($map: $colors, $key: secondary);
-    border: 4px solid map-get($map: $colors, $key: secondary);
+    border: 3px solid map-get($map: $colors, $key: secondary);
     color: black;
 
     &:hover {
       background-color: darken(map-get($map: $colors, $key: secondary), 10%);
-      border: 4px solid darken(map-get($map: $colors, $key: secondary), 10%);
+      border: 3px solid darken(map-get($map: $colors, $key: secondary), 10%);
     }
 
     &:active {
       background-color: darken(map-get($map: $colors, $key: secondary), 20%);
-      border: 4px solid darken(map-get($map: $colors, $key: secondary), 20%);
+      border: 3px solid darken(map-get($map: $colors, $key: secondary), 20%);
     }
   }
 
   &.red {
     background-color: map-get($map: $btn-colors, $key: red);
-    border: 4px solid map-get($map: $btn-colors, $key: red);
+    border: 3px solid map-get($map: $btn-colors, $key: red);
 
     &:hover {
       background-color: darken(map-get($map: $btn-colors, $key: red), 10%);
-      border: 4px solid darken(map-get($map: $btn-colors, $key: red), 10%);
+      border: 3px solid darken(map-get($map: $btn-colors, $key: red), 10%);
     }
 
     &:active {
       background-color: darken(map-get($map: $btn-colors, $key: red), 15%);
-      border: 4px solid darken(map-get($map: $btn-colors, $key: red), 15%);
+      border: 3px solid darken(map-get($map: $btn-colors, $key: red), 15%);
     }
   }
 
   &.blue {
     background-color: map-get($map: $btn-colors, $key: blue);
-    border: 4px solid map-get($map: $btn-colors, $key: blue);
+    border: 3px solid map-get($map: $btn-colors, $key: blue);
 
     &:hover {
       background-color: darken(map-get($map: $btn-colors, $key: blue), 5%);
-      border: 4px solid darken(map-get($map: $btn-colors, $key: blue), 5%);
+      border: 3px solid darken(map-get($map: $btn-colors, $key: blue), 5%);
     }
 
     &:active {
       background-color: darken(map-get($map: $btn-colors, $key: blue), 10%);
-      border: 4px solid darken(map-get($map: $btn-colors, $key: blue), 10%);
+      border: 3px solid darken(map-get($map: $btn-colors, $key: blue), 10%);
     }
+  }
+
+  &.inverted {
+    background-color: transparent;
   }
 }
