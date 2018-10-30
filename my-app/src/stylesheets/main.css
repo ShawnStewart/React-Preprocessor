@@ -41,7 +41,7 @@
 .btn.primary {
   background-color: #0993ca;
   border: 3px solid #0993ca;
-  color: black;
+  color: #262626;
 }
 
 .btn.primary:hover {
@@ -57,7 +57,7 @@
 .btn.secondary {
   background-color: #f1e79f;
   border: 3px solid #f1e79f;
-  color: black;
+  color: #262626;
 }
 
 .btn.secondary:hover {
@@ -117,13 +117,65 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #262626;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.nav {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #0993ca;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #262626;
+  font-size: 1.25em;
+  position: relative;
+}
+
+ul li a::before {
+  content: "";
+  width: 0px;
+  height: 4px;
   background-color: black;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+ul li:hover a::before {
+  width: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #0993ca;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 /*# sourceMappingURL=main.css.map */

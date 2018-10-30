@@ -44,7 +44,7 @@
   &.primary {
     background-color: map-get($map: $colors, $key: primary);
     border: 3px solid map-get($map: $colors, $key: primary);
-    color: black;
+    color: map-get($map: $btn-colors, $key: black);
 
     &:hover {
       background-color: darken(map-get($map: $colors, $key: primary), 10%);
@@ -60,7 +60,7 @@
   &.secondary {
     background-color: map-get($map: $colors, $key: secondary);
     border: 3px solid map-get($map: $colors, $key: secondary);
-    color: black;
+    color: map-get($map: $btn-colors, $key: black);
 
     &:hover {
       background-color: darken(map-get($map: $colors, $key: secondary), 10%);
