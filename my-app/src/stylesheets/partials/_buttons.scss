@@ -2,7 +2,7 @@
 
 .btn {
   background-color: map-get($map: $btn-colors, $key: default);
-  color: white;
+  color: map-get($map: $colors, $key: white);
   border: 3px solid map-get($map: $btn-colors, $key: default);
   border-radius: 5px;
   padding: 10px 28px;

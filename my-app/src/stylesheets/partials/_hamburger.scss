@@ -1,0 +1,12 @@
+.hamburger {
+  cursor: pointer;
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: map-get($map: $colors, $key: white);
+    margin: 6px 0;
+  }
+}

@@ -1,57 +1,117 @@
 @import "../../stylesheets/utilities/variables";
 @import "../../stylesheets/partials/container";
+@import "../../stylesheets/partials/hamburger";
 
 .nav {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  // padding-top: 15px;
+  // padding-bottom: 15px;
   background-color: map-get($map: $colors, $key: primary);
-}
-
-ul {
-  padding: 0;
-  margin: 0;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  color: map-get($map: $colors, $key: white);
 
-  li {
-    list-style: none;
+  .menu-bar {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    a {
-      padding: 10px 20px;
-      text-decoration: none;
-      text-transform: capitalize;
-      color: white;
-      font-size: 1em;
-      position: relative;
+    .menu-bar-logo {
+      cursor: pointer;
+    }
 
-      &::before {
-        content: "";
-        width: 0px;
-        height: 2px;
-        background-color: map-get($map: $btn-colors, $key: black);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        transition: 0.5s;
+    .desktop-menu {
+      padding: 0;
+      margin: 0;
+      display: none;
+
+      li {
+        list-style: none;
+
+        a {
+          padding: 10px 20px;
+          text-decoration: none;
+          text-transform: capitalize;
+          color: map-get($map: $colors, $key: white);
+          font-size: 1em;
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 0px;
+            height: 2px;
+            background-color: map-get($map: $btn-colors, $key: black);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transition: 0.5s;
+          }
+        }
+
+        .active::before {
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: map-get($map: $colors, $key: white);
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+
+        &:hover a::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3em;
+    border-top: 2px solid map-get($map: $colors, $key: black);
+
+    .mobile-menu-item {
+      border-bottom: 1px solid map-get($map: $colors, $key: black);
+      padding: 15px 0;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: darken(
+          $color: map-get($colors, primary),
+          $amount: 10%
+        );
+      }
+
+      &:active {
+        background-color: darken(
+          $color: map-get($colors, primary),
+          $amount: 20%
+        );
+      }
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .menu-bar {
+      .hamburger {
+        display: none;
+      }
+
+      .desktop-menu {
+        display: flex;
       }
     }
 
-    .active::before {
-      content: "";
-      width: 100%;
-      height: 2px;
-      background-color: white;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-    }
-
-    &:hover a::before {
-      width: 100%;
+    .mobile-menu {
+      display: none;
     }
   }
 }
